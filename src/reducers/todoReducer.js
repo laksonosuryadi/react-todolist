@@ -7,9 +7,13 @@ const initialState = [
 ];
 
 const addTodo = (state, newTodo) => {
-  const newTitle = newTodo.title
+  let maxId = 0;
+  const newTitle = newTodo.title;
   const ids = state.map(todo => todo.id);
-  const newId = Math.max(...ids) + 1;
+  if(state.length !== 0) {
+    maxId = Math.max(...ids);
+  }
+  const newId = maxId + 1;
   const todo = {
     id: newId,
     title: newTitle,

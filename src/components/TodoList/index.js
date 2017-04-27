@@ -92,6 +92,7 @@ class TodoList extends React.Component {
                 </TableRowColumn>
               </TableRow>
             )}
+            { this.props.todos.length == 0 && <center><h1 style={{color:'red'}}><marquee width="30%" behavior="alternate">Nothing To-Do Here!</marquee></h1></center> }
             </TableBody>
           </Table>
       </div>
