@@ -6,6 +6,7 @@ const Header = () => (
     <AppBar
       title="React To-Do-List"
       iconClassNameRight="muidocs-icon-navigation-expand-more"
+      style={{backgroundColor: '#D84315'}}
     />
   </div>
 );

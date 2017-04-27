@@ -58,7 +58,7 @@ class Add extends React.Component {
 
     return (
       <div>
-        <FloatingActionButton onTouchTap={this.handleOpen}>
+        <FloatingActionButton onTouchTap={this.handleOpen} backgroundColor='orange'>
           <TodoAdd />
         </FloatingActionButton>
         <Dialog

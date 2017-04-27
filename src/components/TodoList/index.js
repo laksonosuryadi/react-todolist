@@ -68,12 +68,22 @@ class TodoList extends React.Component {
                 <TableRowColumn>{todo.title}</TableRowColumn>
                 {todo.status === false ? <TableRowColumn style={{color:'red'}}>Uncomplete</TableRowColumn> : <TableRowColumn style={{color:'green'}}>Complete</TableRowColumn>}
                 <TableRowColumn>
-                  <FloatingActionButton mini={true} style={styles.doneBtn} onClick={() => this.handleChange(todo.id, todo.status)}>
+                  <FloatingActionButton
+                    mini={true}
+                    style={styles.doneBtn}
+                    backgroundColor='green'
+                    onClick={() => this.handleChange(todo.id, todo.status)}
+                  >
                     { todo.status === false ? <TodoDone /> : <TodoUnDone />}
                   </FloatingActionButton>
                 </TableRowColumn>
                 <TableRowColumn>
-                <FloatingActionButton mini={true} style={styles.doneBtn} onClick={() => this.confirmDelete(todo.id)}>
+                <FloatingActionButton
+                  mini={true}
+                  style={styles.doneBtn}
+                  backgroundColor='red'
+                  onClick={() => this.confirmDelete(todo.id)}
+                >
                   <TodoDelete />
                 </FloatingActionButton>
                 </TableRowColumn>
